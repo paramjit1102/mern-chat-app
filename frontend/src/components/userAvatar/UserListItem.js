@@ -2,9 +2,11 @@ import { Avatar } from "@chakra-ui/avatar";
 import { Box, Text } from "@chakra-ui/layout";
 import { ChatState } from "../../Context/ChatProvider";
 
-const UserListItem = ({ handleFunction }) => {
-  const { user } = ChatState();
+const UserListItem = ({ handleFunction, users }) => {
+  let { user } = ChatState();
 
+  //? Here is updation the userlist prev code showing only current user And now after above code adding listing showing all users that are matched in our db
+  user = users ? users : user
   return (
     <Box
       onClick={handleFunction}

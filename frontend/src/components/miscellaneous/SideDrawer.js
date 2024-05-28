@@ -210,7 +210,7 @@ function SideDrawer() {
               searchResult?.map((user) => (
                 <UserListItem
                   key={user._id}
-                  user={user}
+                  users={user}
                   handleFunction={() => accessChat(user._id)}
                 />
               ))
