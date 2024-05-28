@@ -59,7 +59,6 @@ const GroupChatModal = ({ children }) => {
         },
       };
       const { data } = await axios.get(`/api/user?search=${search}`, config);
-      console.log(data);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
@@ -174,7 +173,7 @@ const GroupChatModal = ({ children }) => {
                 .map((user) => (
                   <UserListItem
                     key={user._id}
-                    user={user}
+                    users={user}
                     handleFunction={() => handleGroup(user)}
                   />
                 ))

@@ -262,7 +262,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
               searchResult?.map((user) => (
                 <UserListItem
                   key={user._id}
-                  user={user}
+                  users={user}
                   handleFunction={() => handleAddUser(user)}
                 />
               ))
